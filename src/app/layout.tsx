@@ -39,11 +39,21 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: "Akbar Gym | Fitness & Training in South Lombok",
     description: SITE.description,
+    images: [
+      {
+        url: "/og-akbar-gym.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${SITE.name} | ${SITE.tagline}`,
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Akbar Gym | Fitness & Training in South Lombok",
     description: SITE.description,
+    images: ["/og-akbar-gym.jpg"],
   },
   robots: {
     index: true,
