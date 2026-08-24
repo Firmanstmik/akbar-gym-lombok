@@ -10,7 +10,7 @@ export const SITE = {
   supportingLine: "South Lombok's training community.",
   description:
     "Akbar Gym is a fitness and training gym in South Lombok with locations in Sengkol and Praya. Focused training, real community, personal coaching.",
-  url: "https://akbargym.local", // replace with production domain
+  url: "https://akbar-gym.vercel.app",
   locale: "id_ID",
   region: "South Lombok, Indonesia",
   instagram: {
