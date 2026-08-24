@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { heroSlides } from "@/data/content";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 
 import "swiper/css";
@@ -46,11 +46,12 @@ export function Hero() {
             {heroSlides.map((slide, index) => (
               <SwiperSlide key={slide.id}>
                 <div className="hero-stage relative h-full w-full">
-                  <Image
+                  <MediaImage
                     src={slide.src}
                     alt={t.heroAlts[slide.id]}
                     fill
                     priority={index === 0}
+                    quality={index === 0 ? 80 : 70}
                     sizes="100vw"
                     className="hero-kenburns object-cover object-[center_28%]"
                   />
@@ -59,11 +60,12 @@ export function Hero() {
             ))}
           </Swiper>
         ) : (
-          <Image
+          <MediaImage
             src={heroSlides[0].src}
             alt={t.heroAlts[heroSlides[0].id]}
             fill
             priority
+            quality={80}
             sizes="100vw"
             className="hero-kenburns object-cover object-[center_28%]"
           />

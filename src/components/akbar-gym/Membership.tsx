@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { membershipPlans } from "@/data/content";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 
@@ -35,10 +35,11 @@ export function Membership() {
                   }`}
                 >
                   <div className="relative aspect-[16/10]">
-                    <Image
+                    <MediaImage
                       src={plan.image}
                       alt={copy.alt}
                       fill
+                      quality={70}
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover"
                     />

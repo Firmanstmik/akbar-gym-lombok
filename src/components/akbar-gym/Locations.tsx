@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { locations } from "@/data/content";
 import { useI18n } from "@/i18n/LocaleProvider";
 import { Reveal } from "./Reveal";
 import { Btn } from "./Btn";
+import { MediaImage } from "./MediaImage";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 
 export function Locations() {
@@ -32,10 +32,11 @@ export function Locations() {
               <Reveal key={loc.id} delayMs={i * 90} variant="scale">
                 <article className="flex h-full flex-col overflow-hidden bg-[#f4f4f4]">
                   <div className="relative aspect-[16/9]">
-                    <Image
+                    <MediaImage
                       src={loc.image}
                       alt={copy.alt}
                       fill
+                      quality={70}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />

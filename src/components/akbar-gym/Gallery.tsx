@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useId, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { galleryItems } from "@/data/content";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 
 export function Gallery() {
@@ -69,10 +69,11 @@ export function Gallery() {
                 className="group relative h-full min-h-[220px] w-full overflow-hidden bg-ink cursor-pointer focus-visible:outline-brand"
                 aria-label={`Open gallery image: ${item.alt}`}
               >
-                <Image
+                <MediaImage
                   src={item.src}
                   alt={item.alt}
                   fill
+                  quality={70}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
                 />
@@ -131,10 +132,11 @@ export function Gallery() {
             className="relative h-[70vh] w-full max-w-5xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
+            <MediaImage
               src={galleryItems[active].src}
               alt={galleryItems[active].alt}
               fill
+              quality={80}
               sizes="100vw"
               className="object-contain"
               priority

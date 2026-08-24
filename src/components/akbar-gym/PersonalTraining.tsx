@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 
@@ -23,10 +23,11 @@ export function PersonalTraining() {
 
         <Reveal variant="clip">
           <div className="relative aspect-[16/11] overflow-hidden rounded-[20px] bg-ink">
-            <Image
+            <MediaImage
               src="/images/akbar-gym/generated/card-personal-training.webp"
               alt={t.pt.alt}
               fill
+              quality={70}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

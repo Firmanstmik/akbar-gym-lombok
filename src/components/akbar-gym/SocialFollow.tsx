@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { SOCIAL_LINKS } from "@/lib/site";
 import { galleryItems } from "@/data/content";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 
 const feed = galleryItems.map((item, index) => {
   const network = SOCIAL_LINKS[index % SOCIAL_LINKS.length];
@@ -45,10 +45,11 @@ export function SocialFollow() {
               className="social-marquee-card group relative overflow-hidden bg-ink cursor-pointer focus-visible:outline-brand"
               aria-label={`${item.alt}, ${item.network.label}`}
             >
-              <Image
+              <MediaImage
                 src={item.src}
                 alt={item.alt}
                 fill
+                quality={60}
                 sizes="280px"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
               />

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { facilities } from "@/data/content";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 
 export function Facilities() {
@@ -31,10 +31,11 @@ export function Facilities() {
             >
               <a href="#gallery" className="group relative block cursor-pointer">
                 <div className="relative aspect-[3/4] overflow-hidden bg-ink">
-                  <Image
+                  <MediaImage
                     src={item.image}
                     alt={item.alt}
                     fill
+                    quality={70}
                     sizes="(max-width: 768px) 80vw, 33vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   />

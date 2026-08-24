@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { SITE } from "@/lib/site";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 
 export function Community() {
@@ -39,10 +39,11 @@ export function Community() {
         <div className="mt-12 grid gap-4 md:grid-cols-12 md:gap-5">
           <Reveal className="md:col-span-7" variant="clip">
             <div className="relative aspect-[16/11] overflow-hidden md:aspect-auto md:h-full md:min-h-[28rem]">
-              <Image
+              <MediaImage
                 src="/images/akbar-gym/community/welcome-group-wide.webp"
                 alt={t.community.alts.group}
                 fill
+                quality={70}
                 sizes="(max-width: 768px) 100vw, 58vw"
                 className="object-cover object-center"
               />
@@ -51,10 +52,11 @@ export function Community() {
           <div className="grid gap-4 md:col-span-5">
             <Reveal delayMs={80} variant="scale">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
+                <MediaImage
                   src="/images/akbar-gym/community/women-training-wide.webp"
                   alt={t.community.alts.women}
                   fill
+                  quality={70}
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover object-center"
                 />
@@ -62,10 +64,11 @@ export function Community() {
             </Reveal>
             <Reveal delayMs={140} variant="scale">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
+                <MediaImage
                   src="/images/akbar-gym/community/community-atmosphere-wide.webp"
                   alt={t.community.alts.pose}
                   fill
+                  quality={70}
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover object-center"
                 />

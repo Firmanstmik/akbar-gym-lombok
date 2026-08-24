@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { Check } from "lucide-react";
 import { useI18n } from "@/i18n/LocaleProvider";
 import { Reveal } from "./Reveal";
 import { Btn } from "./Btn";
+import { MediaImage } from "./MediaImage";
 
 export function FindGym() {
   const { t } = useI18n();
@@ -36,10 +36,11 @@ export function FindGym() {
 
         <Reveal variant="clip">
           <div className="relative aspect-[16/11] overflow-hidden rounded-[20px] bg-ink">
-            <Image
+            <MediaImage
               src="/images/akbar-gym/generated/find-gym.webp"
               alt={t.findGym.alt}
               fill
+              quality={70}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

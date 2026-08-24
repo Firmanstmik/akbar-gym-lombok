@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { storyCards } from "@/data/content";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 
 export function Spotlight() {
@@ -19,10 +19,11 @@ export function Spotlight() {
                 href={card.href}
                 className="group relative block min-h-[22rem] overflow-hidden rounded-[20px] bg-ink cursor-pointer focus-visible:outline-brand md:min-h-[26rem]"
               >
-                <Image
+                <MediaImage
                   src={card.image}
                   alt={copy.alt}
                   fill
+                  quality={70}
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 />

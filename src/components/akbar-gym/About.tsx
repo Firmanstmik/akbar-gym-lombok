@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 
 export function About() {
@@ -32,10 +32,11 @@ export function About() {
         <div className="relative lg:col-span-7">
           <Reveal variant="clip">
             <div className="relative aspect-[4/5] overflow-hidden md:aspect-[5/4]">
-              <Image
+              <MediaImage
                 src="/images/akbar-gym/community/welcome-group-wide.webp"
                 alt="Akbar Gym trainer and members together on the training floor"
                 fill
+                quality={70}
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"
               />

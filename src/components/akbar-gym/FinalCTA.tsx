@@ -1,14 +1,15 @@
-import Image from "next/image";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 
 export function FinalCTA() {
   return (
     <section id="join" className="relative overflow-hidden py-24 text-warm md:py-32">
-      <Image
+      <MediaImage
         src="/images/akbar-gym/community/athletes.webp"
         alt=""
         fill
+        quality={65}
         sizes="100vw"
         className="object-cover"
       />

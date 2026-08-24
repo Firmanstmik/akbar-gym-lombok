@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Play } from "lucide-react";
 import { communityStories } from "@/data/content";
 import { SITE } from "@/lib/site";
 import { useI18n } from "@/i18n/LocaleProvider";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 import { WhatsAppCTA } from "./WhatsAppCTA";
 
@@ -40,10 +40,11 @@ function StoryVideo({
           className="absolute inset-0 h-full w-full cursor-pointer border-0 bg-transparent p-0"
           onClick={() => setPlaying(true)}
         >
-          <Image
+          <MediaImage
             src={image}
             alt={alt}
             fill
+            quality={70}
             sizes="(max-width: 768px) 100vw, 36vw"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />

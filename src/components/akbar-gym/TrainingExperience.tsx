@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "./MediaImage";
 import { Reveal } from "./Reveal";
 
 const points = [
@@ -26,10 +26,11 @@ export function TrainingExperience() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-2 lg:items-center lg:gap-20">
         <Reveal variant="clip">
           <div className="relative aspect-[3/4] overflow-hidden md:aspect-[4/5]">
-            <Image
+            <MediaImage
               src="/images/akbar-gym/community/athletes.webp"
               alt="Athletes posing at Akbar Gym after training"
               fill
+              quality={70}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

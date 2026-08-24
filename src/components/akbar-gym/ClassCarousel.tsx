@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { trainingTracks } from "@/data/content";
 import { useI18n } from "@/i18n/LocaleProvider";
 import { Btn } from "./Btn";
+import { MediaImage } from "./MediaImage";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -64,10 +64,11 @@ export function ClassCarousel() {
               <SwiperSlide key={item.id}>
                 <article className="class-slide bg-white">
                   <div className="class-card-photo">
-                    <Image
+                    <MediaImage
                       src={item.image}
                       alt={copy.alt}
                       fill
+                      quality={70}
                       sizes="(max-width: 768px) 90vw, 36vw"
                       className="object-cover"
                     />
