@@ -9,7 +9,7 @@ export function FinalCTA() {
         src="/images/akbar-gym/community/athletes.webp"
         alt=""
         fill
-        quality={65}
+        quality={80}
         sizes="100vw"
         className="object-cover"
       />

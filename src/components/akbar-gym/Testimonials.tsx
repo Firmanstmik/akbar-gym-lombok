@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Play } from "lucide-react";
 import { communityStories } from "@/data/content";
 import { SITE } from "@/lib/site";
@@ -21,30 +21,61 @@ function StoryVideo({
   playLabel: string;
 }) {
   const [playing, setPlaying] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const start = async () => {
+    setFailed(false);
+    setPlaying(true);
+    // Wait a tick so the video element mounts, then play explicitly (iOS-friendly)
+    requestAnimationFrame(() => {
+      const el = videoRef.current;
+      if (!el) return;
+      const playPromise = el.play();
+      if (playPromise) {
+        playPromise.catch(() => {
+          // Autoplay blocked: keep controls visible so user can tap play
+        });
+      }
+    });
+  };
 
   return (
     <div className="story-media group relative aspect-[16/10] w-full overflow-hidden bg-ink">
       {playing ? (
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          src={video}
-          poster={image}
-          controls
-          playsInline
-          autoPlay
-          onEnded={() => setPlaying(false)}
-        />
+        <>
+          <video
+            ref={videoRef}
+            className="absolute inset-0 h-full w-full object-cover"
+            src={video}
+            poster={image}
+            controls
+            playsInline
+            preload="metadata"
+            controlsList="nodownload"
+            onEnded={() => setPlaying(false)}
+            onError={() => {
+              setFailed(true);
+              setPlaying(false);
+            }}
+          />
+          {failed ? (
+            <p className="absolute inset-x-0 bottom-3 z-10 px-3 text-center text-xs text-white/90">
+              Video unavailable. Try again later.
+            </p>
+          ) : null}
+        </>
       ) : (
         <button
           type="button"
           className="absolute inset-0 h-full w-full cursor-pointer border-0 bg-transparent p-0"
-          onClick={() => setPlaying(true)}
+          onClick={start}
         >
           <MediaImage
             src={image}
             alt={alt}
             fill
-            quality={70}
+            quality={85}
             sizes="(max-width: 768px) 100vw, 36vw"
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />

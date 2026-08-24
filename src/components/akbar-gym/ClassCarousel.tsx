@@ -68,7 +68,7 @@ export function ClassCarousel() {
                       src={item.image}
                       alt={copy.alt}
                       fill
-                      quality={70}
+                      quality={85}
                       sizes="(max-width: 768px) 90vw, 36vw"
                       className="object-cover"
                     />

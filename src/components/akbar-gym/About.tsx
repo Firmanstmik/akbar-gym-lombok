@@ -36,7 +36,7 @@ export function About() {
                 src="/images/akbar-gym/community/welcome-group-wide.webp"
                 alt="Akbar Gym trainer and members together on the training floor"
                 fill
-                quality={70}
+                quality={85}
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"
               />

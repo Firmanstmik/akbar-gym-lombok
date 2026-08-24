@@ -51,7 +51,7 @@ export function Hero() {
                     alt={t.heroAlts[slide.id]}
                     fill
                     priority={index === 0}
-                    quality={index === 0 ? 80 : 70}
+                    quality={index === 0 ? 90 : 85}
                     sizes="100vw"
                     className="hero-kenburns object-cover object-[center_28%]"
                   />
@@ -65,7 +65,7 @@ export function Hero() {
             alt={t.heroAlts[heroSlides[0].id]}
             fill
             priority
-            quality={80}
+            quality={90}
             sizes="100vw"
             className="hero-kenburns object-cover object-[center_28%]"
           />

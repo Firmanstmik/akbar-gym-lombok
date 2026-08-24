@@ -40,7 +40,7 @@ export function FindGym() {
               src="/images/akbar-gym/generated/find-gym.webp"
               alt={t.findGym.alt}
               fill
-              quality={70}
+              quality={85}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

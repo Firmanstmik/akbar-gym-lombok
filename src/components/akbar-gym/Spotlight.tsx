@@ -23,7 +23,7 @@ export function Spotlight() {
                   src={card.image}
                   alt={copy.alt}
                   fill
-                  quality={70}
+                  quality={85}
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 />

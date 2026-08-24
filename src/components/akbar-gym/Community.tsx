@@ -43,7 +43,7 @@ export function Community() {
                 src="/images/akbar-gym/community/welcome-group-wide.webp"
                 alt={t.community.alts.group}
                 fill
-                quality={70}
+                quality={85}
                 sizes="(max-width: 768px) 100vw, 58vw"
                 className="object-cover object-center"
               />
@@ -56,7 +56,7 @@ export function Community() {
                   src="/images/akbar-gym/community/women-training-wide.webp"
                   alt={t.community.alts.women}
                   fill
-                  quality={70}
+                  quality={85}
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover object-center"
                 />
@@ -68,7 +68,7 @@ export function Community() {
                   src="/images/akbar-gym/community/community-atmosphere-wide.webp"
                   alt={t.community.alts.pose}
                   fill
-                  quality={70}
+                  quality={85}
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover object-center"
                 />

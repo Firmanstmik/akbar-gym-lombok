@@ -73,7 +73,7 @@ export function Gallery() {
                   src={item.src}
                   alt={item.alt}
                   fill
-                  quality={70}
+                  quality={85}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
                 />
@@ -136,7 +136,7 @@ export function Gallery() {
               src={galleryItems[active].src}
               alt={galleryItems[active].alt}
               fill
-              quality={80}
+              quality={90}
               sizes="100vw"
               className="object-contain"
               priority

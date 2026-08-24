@@ -30,7 +30,7 @@ export function TrainingExperience() {
               src="/images/akbar-gym/community/athletes.webp"
               alt="Athletes posing at Akbar Gym after training"
               fill
-              quality={70}
+              quality={85}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

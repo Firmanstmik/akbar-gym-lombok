@@ -35,7 +35,7 @@ export function Facilities() {
                     src={item.image}
                     alt={item.alt}
                     fill
-                    quality={70}
+                    quality={85}
                     sizes="(max-width: 768px) 80vw, 33vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   />

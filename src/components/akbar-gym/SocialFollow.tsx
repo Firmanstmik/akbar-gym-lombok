@@ -49,7 +49,7 @@ export function SocialFollow() {
                 src={item.src}
                 alt={item.alt}
                 fill
-                quality={60}
+                quality={80}
                 sizes="280px"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
               />

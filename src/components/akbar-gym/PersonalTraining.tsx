@@ -27,7 +27,7 @@ export function PersonalTraining() {
               src="/images/akbar-gym/generated/card-personal-training.webp"
               alt={t.pt.alt}
               fill
-              quality={70}
+              quality={85}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />

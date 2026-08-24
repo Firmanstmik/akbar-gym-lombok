@@ -36,7 +36,7 @@ export function Locations() {
                       src={loc.image}
                       alt={copy.alt}
                       fill
-                      quality={70}
+                      quality={85}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />

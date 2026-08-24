@@ -13,6 +13,8 @@ export function MediaImage({
   showLoader = true,
   fill,
   alt,
+  quality = 85,
+  sizes,
   ...props
 }: MediaImageProps) {
   const [loaded, setLoaded] = useState(false);
@@ -30,6 +32,8 @@ export function MediaImage({
       <Image
         alt={alt}
         fill={fill}
+        quality={quality}
+        sizes={sizes}
         {...props}
         className={`media-img ${className}`.trim()}
         onLoadingComplete={() => setLoaded(true)}
