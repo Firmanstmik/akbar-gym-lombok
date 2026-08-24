@@ -24,7 +24,6 @@
 .DS_Store
 *.pem
 .cursor/
-public/videos/**/*.mp4
 
 # debug
 npm-debug.log*
